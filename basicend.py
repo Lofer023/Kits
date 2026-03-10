@@ -32,5 +32,5 @@ def strandmass3(spisok):
        else: 
         continue
    return mass
-##
+###
 print(strandmass3([2,2,8,7,2,9,3,3,5]))
