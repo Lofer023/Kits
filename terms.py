@@ -53,6 +53,7 @@ def odd_numbers():
       continue
     print(n)
 
+print('odd')
 odd_numbers()
 
 
@@ -129,3 +130,13 @@ async def func3():
 asyncio.run(func3())
 
 
+
+nabor = [
+    [1,2,3],
+    [13,9,21]
+]
+
+del nabor[1][1]
+del nabor[0][0]
+
+print(nabor)
