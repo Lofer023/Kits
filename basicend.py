@@ -1,36 +1,32 @@
-"""
-Дана строка. Посчитай, сколько в ней гласных букв.
-Разверни список «вручную» (без [::-1]).
-Удали дубликаты из списка чисел, сохранив порядок.
-"""
-def strandmass1(text):
-    bas = "aeiouy"
-    text  = text.lower()
-    i = 0
-    for j in text:
-       if j in bas:
-            i+=1
-    return i
+from datetime import datetime
+import datetime as dt
 
-print(strandmass1('abracadabra'))
+date = '2024-11-08'
+print(date)
 
-def strandmass2(spisok):
-   mass = []
-   for _ in range(len(spisok)-1,-1,-1):
-      mass.append(spisok[_])
-   return mass
+date2 = "2024-06-09 14:30:25 INFO: User login successful"
+timestamp_str = date2[:19]
+print('d',timestamp_str)
+format = datetime.strptime(date,"%Y-%m-%d")
+format2 = datetime.strptime(timestamp_str,"%Y-%m-%d  %H:%M:%S")
 
-print(strandmass2([2,1,8,7,6,9,12,3,5]))
+print(format)
+print(format2)
 
-def strandmass3(spisok):
-   mass = []
-   ss = set()
-   for i in spisok:
-       if i not in ss:
-        ss.add(i)
-        mass.append(i)
-       else: 
-        continue
-   return mass
-###
-print(strandmass3([2,2,8,7,2,9,3,3,5]))
+
+import time 
+
+meeting_time = dt.datetime.now()
+#time.sleep(1)
+print()
+print(meeting_time)
+end_time = dt.datetime.now()
+print(end_time)
+print(end_time - meeting_time)
+
+
+dsp = dt.date(2024,10,8)
+print(dsp.year,dsp.month,dsp.day)
+
+login_time = dt.datetime(2024, 4, 9, 18, 30)
+print(login_time.date())
