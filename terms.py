@@ -140,3 +140,20 @@ del nabor[1][1]
 del nabor[0][0]
 
 print(nabor)
+
+
+m = 1
+
+def funcvalidate(m):
+    m = 1/m
+
+try:
+    funcvalidate(m)
+    print('No division error')
+except ZeroDivisionError as e:
+    print('error',e)
+else:
+    print('end')
+
+import sys
+print(sys.argv)
