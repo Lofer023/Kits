@@ -157,3 +157,39 @@ else:
 
 import sys
 print(sys.argv)
+print(sys.executable)
+print(sys.getrecursionlimit())
+print(sys.hash_info.inf)
+print(sys.int_info.bits_per_digit)
+print(sys.orig_argv)
+
+
+f = open('text.txt','w')
+f.write('Lorem ipsum \n dolor sit amet')
+f.close()
+
+f = open('text.txt','r')
+read_data = f.readline()
+print(read_data)
+f.close()
+
+
+
+
+def print_biography(name, country, age, hobby):
+  print("Hello! My name is " + name + " and I'm " + str(age) +
+        " years old. I come from " + country +
+         ", and in my free time I like to " + hobby + ".")
+
+adam = {
+  "name": "Adam",
+  "country": "Germany",
+  "age": 23,
+  "hobby": "paint"
+}
+
+print_biography(**adam)
+
+
+with open('terms.txt','w') as f:
+    file.read()
