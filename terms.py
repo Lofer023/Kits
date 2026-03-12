@@ -191,5 +191,53 @@ adam = {
 print_biography(**adam)
 
 
-with open('terms.txt','w') as f:
-    file.read()
+with open('text.txt','r') as f:
+    context = f.read()
+
+print('p', context)
+
+
+
+
+
+cake = ["piece1", "piece2", "piece3"]
+cake_ready_to_distribute = iter(cake)
+try:
+    print(next(cake_ready_to_distribute))
+    print(next(cake_ready_to_distribute))
+    print(next(cake_ready_to_distribute))
+    print(next(cake_ready_to_distribute))
+    print(next(cake_ready_to_distribute))
+except StopIteration:
+  print("stop iteration error")
+
+print()
+
+cake = ["piece1", "piece2", "piece3","piece4"]
+for piece in cake:
+  print(piece)
+
+print()
+
+cake = ["piece1", "piece2", "piece3"]
+cake_ready_to_distribute = iter(cake)
+while True:
+  try:
+    print(next(cake_ready_to_distribute))
+  except StopIteration:
+    break
+
+print()
+
+def funci(per):
+    pad0 = []
+    pad = iter(per) 
+    for _ in per:
+        padret = next(pad)
+        pad0.append(padret)
+    print(pad0)
+    return pad0
+
+per = ['1','2','55','232','2']
+pad = list(funci(per))
+
