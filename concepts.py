@@ -370,10 +370,77 @@ print(list(nums))
 
 print()
 
-print(round(1123.14159))
-print(round(1123.14159, 3))
-print(round(1123.14159, -3))
-print(round(1123.14159, -4))
+class Person:
+  pass
+
+person = Person()
+
+setattr(person,'name','Mip')
+setattr(person,'age','22')
+
+new_data = getattr(person,'name')
+new_data2 = getattr(person,'age')
+
+print(new_data)
+print(new_data2)
+
+print()
+print()
+
+a = [3,2,1,4,6]
+print(sorted(a,reverse=True))
+print()
+
+
+
+class Codecademy:
+  def print_welcome(name):
+    print("Welcome to...", name)
+
+Codecademy.print_welcome = staticmethod(Codecademy.print_welcome)
+
+Codecademy.print_welcome("Codecademy")
+Codecademy().print_welcome("Codecademy")
+print()
+
+
+
+class Codecademy:
+  def print_welcome(name):
+    print("Welcome to...", name)
+
+
+new_welcome = staticmethod(Codecademy.print_welcome)
+new_welcome("Codecademy")
+
+print()
+
+
+class Basicfunc:
+  def data(self):
+    print('Data information')
+
+class Infoto(Basicfunc):
+  def data(self):
+    super().data()
+    print('Data two info')
+
+calling = Infoto()
+calling.data()
+
+
+a = [random.randint(1,10) for i in range(10)]
+b = [random.randint(13,22) for i in range(10)]
+zipped = list(zip(a,b))
+ab = []
+for i in zipped:
+  ab.append(sum(i))
+
+ab = [i*13%11 for i in ab]
+print(zipped)
+print(ab)
+print(sum(ab)/len(ab))
+  
 
 
 
