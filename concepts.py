@@ -245,10 +245,135 @@ print()
 import time
 
 
-for i in range(10):
-  print(i, end=' ', file=sys.stdout, flush=True)
-  time.sleep(1)
+# for i in range(10):
+#   print(i, end=' ', file=sys.stdout, flush=True)
+#   time.sleep(1)
+
+print('OTHER')
+
+class Test:
+    def __init__(self):
+        pass
+
+    def __str__(self):
+        stroka = "basic output"
+        return stroka
+
+t = Test()
+print(t)
+
+
+
+
 
 print()
+
+
+class upper_case_decorator:
+
+  def __init__(self, original_function):
+    self.original_function = original_function
+
+
+  def __call__(self):
+    print(f"'{self.original_function.__name__}' function execution will start now.")
+
+    result = self.original_function()
+
+    result = result.upper()
+    return result
+
+
+
+@upper_case_decorator
+def greeting():
+  return 'hello Dharma'
+
+print(greeting())
+
+print('--294 str--')
+
+def upper_case_decorator(original_function):
+
+    def wrapper():
+        result = original_function()
+        result = result.upper()
+        return result
+    return wrapper
+
+@upper_case_decorator
+def greeting():
+    return 'hello Dharma'
+
+class upper_case_decorator_using_class:
+
+  def __init__(self, original_function):
+    self.original_function = original_function
+
+
+  def __call__(self):
+    print(f"'{self.original_function.__name__}' function execution will start now.")
+
+    result = self.original_function()
+
+    result = result.upper()
+    return result
+
+@upper_case_decorator_using_class
+def farewell():
+    return 'bye'
+
+print(greeting())
+print(farewell())
+print()
+
+def upper_case_decorator(original_function):
+
+    def wrapper(arg1):
+
+        result = original_function(arg1)
+
+        result = result.upper()
+        return result
+
+    return wrapper
+
+@upper_case_decorator
+def greeting(arg1):
+    return arg1 + '!'
+
+
+print(greeting('hi'))
+print()
+
+
+def upper_case_decorator(original_function):
+
+    def wrapper():
+
+        result = original_function()
+        result = result.upper()
+        return result
+
+    return wrapper
+
+@upper_case_decorator
+def greeting():
+    return 'hello Dharma'
+
+print(greeting.__name__)
+print(greeting.__doc__)
+
+
+nums = range(10,60,10)
+print(list(nums))
+
+print()
+
+print(round(1123.14159))
+print(round(1123.14159, 3))
+print(round(1123.14159, -3))
+print(round(1123.14159, -4))
+
 
 
