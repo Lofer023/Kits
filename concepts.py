@@ -155,7 +155,100 @@ data = [1, 2, 3]
 p = [tuple,set,list]
 for _ in p:
     if isinstance(data, _):
-        print(f"List or tuple {_}")
+        print(f" Spisok type {_}")
     else:
         pass
+
+print()
+
+
+from functools import partial
+import random
+
+def get_random_num(a, b):
+  return random.randint(a, b)
+
+another_iterator = iter(partial(get_random_num, 1, 10), 7)
+
+print('\nNumbers: ')
+
+aa = []
+for i in another_iterator:
+    aa.append(i)
+print(aa)
+print('len',len(aa))
+  
+
+print()
+
+
+list1 = [1, 2, 3]
+list2 = [4, 5, 6]
+zipped = zip(list1, list2)
+print(list(zipped))
+
+
+
+animals_tuple = ("cat", "dog", "hamster")
+print(f"Tuple example with list(): {list(animals_tuple)}")
+
+print("------------------------------------")
+
+animal_string = "crocodile"
+print(f"String example with list(): {list(animal_string)}")
+
+print("------------------------------------")
+
+my_range = range(1, 4)
+print(f"Range example with list(): {list(my_range)}")
+
+
+
+a_list = [1.6, 5.4,12.0]
+print(list(map(lambda x: int(x)*10%3, a_list)))
+
+
+highest_value_name = max("Tom", "Jerry", "Spike", "Tyke")
+
+print(highest_value_name)
+
+
+
+def countdown(n):
+  while n > 0:
+    yield n
+    n -= 1
+
+counter = countdown(3)
+
+def countdown(n):
+  while n > 0:
+    yield n
+    n -= 1
+
+counter = countdown(3)
+
+print(next(counter))
+print(next(counter))
+print(next(counter))
+print(next(counter, "Finished"))
+
+print()
+print(pow(5,2,14))
+print(pow(5,3,3))
+
+print()
+import sys
+print('3','8','6','4','9',file=sys.stdout, sep=' ',end='\n',flush=True)
+
+print()
+import time
+
+
+for i in range(10):
+  print(i, end=' ', file=sys.stdout, flush=True)
+  time.sleep(1)
+
+print()
+
 
