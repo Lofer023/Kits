@@ -440,7 +440,3 @@ ab = [i*13%11 for i in ab]
 print(zipped)
 print(ab)
 print(sum(ab)/len(ab))
-  
-
-
-

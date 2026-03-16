@@ -261,5 +261,14 @@ def convert_minutes_to_days(total_mins):
 
 
 import os
-
 print(os.getcwd())
+
+
+
+import package.module1 as m1
+print('lamba')
+
+my_list = [1, 5, 4, 6, 8, 11, 3, 12]
+ 
+
+print(m1.mylist(my_list))
