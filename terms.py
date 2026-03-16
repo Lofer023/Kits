@@ -241,3 +241,25 @@ def funci(per):
 per = ['1','2','55','232','2']
 pad = list(funci(per))
 
+
+a  = (213_478_955_37127 % 2342343)%17
+print(a)
+
+
+
+
+
+def convert_minutes_to_days(total_mins):
+    days = total_mins // 1440
+    extra_minutes = total_mins % 1440
+
+    hours = extra_minutes // 60
+    minutes = extra_minutes % 60
+
+    print(f"{total_mins} = {days} days, {hours} hours, and {minutes} minutes")
+
+
+
+import os
+
+print(os.getcwd())
